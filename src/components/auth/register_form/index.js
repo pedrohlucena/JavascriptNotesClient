@@ -19,13 +19,6 @@ function RegisterForm() {
     } catch(error) {
       setError(true)
     }
-
-    try {
-      const user = await UsersService.register({name: name, email: email, password: password});
-      setRedirectToLogin(true);
-    } catch (error) {
-      setError(true);
-    }
   }
 
   if (redirectToLogin)
